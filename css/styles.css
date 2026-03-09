@@ -247,17 +247,18 @@ button {
 .hero {
    
     background-color: #2E2F42;
-    color: #FFFFFF;
+    /* color: #FFFFFF; */
     padding: 72px 0;
     margin: 0 auto;
     text-align: center;
-    max-width: 320px;
+    max-width: 428px;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7),
                 rgba(46, 47, 66, 0.7)),
-                url(../images/mobile.png);
+                url(../images/mob.png);
                 background-repeat: no-repeat;
                 background-position: center;
                 background-size: cover;
+                text-align: center;
 }
 @media screen and (min-width: 768px) {
     .hero {
@@ -283,7 +284,6 @@ button {
         font-size: 36px;
         line-height: 1.11;
         letter-spacing: 0.02em;
-        text-align: center;
         max-width: 216px;
         color: #fff;
         margin: 0 auto 72px;
