@@ -18,13 +18,13 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <header class="header hide">
-      <div class="container">
+    <header class="header">
+      <div class="container header-container">
         <a href="./index.html" class="logo">
           <span class="logo-accent">Web</span>Studio
         </a>
 
-        <nav>
+        <nav class="nav-desktop">
           <ul class="nav-desc">
             <li class="nav-desc-item">
               <a class="nav-desc-link active" href="#Studio">Studio</a>
@@ -37,25 +37,101 @@
             </li>
           </ul>
         </nav>
-        <address class="socials">
+        <address class="socials-desktop">
           <ul class="socials-title">
-            <li class="socials-item">
+            <li>
               <a class="socials-linc" href="mailto:info@devstudio.com"
                 >info@devstudio.com</a
               >
             </li>
-            <li class="socials-item">
+            <li>
               <a class="socials-linc" href="tel:+110001111111"
                 >+11 (000) 111-11-11</a
               >
             </li>
           </ul>
         </address>
+
+        <input
+          type="checkbox"
+          id="menu-toggle"
+          class="menu-checkbox visually-hidden"
+        />
+
+        <label for="menu-toggle" class="burger-btn">
+          <svg width="24" height="24">
+            <use href="./images/icons.svg#icon-icon-menu"></use>
+          </svg>
+        </label>
+
+        <div class="mobile-menu-wrapper">
+          <label for="menu-toggle" class="menu-close-btn">
+            <svg width="8" height="8">
+              <use href="./images/icons.svg#icon-icon-close"></use>
+            </svg>
+          </label>
+
+          <nav class="mobile-nav">
+            <ul class="mobile-menu-list">
+              <li><a href="" class="mobile-menu-link active">Studio</a></li>
+              <li><a href="" class="mobile-menu-link">Portfolio</a></li>
+              <li><a href="" class="mobile-menu-link">Contacts</a></li>
+            </ul>
+          </nav>
+
+          <div class="mobile-menu-bottom">
+            <address class="mobile-contacts">
+              <ul class="mobile-contacts-list">
+                <li>
+                  <a href="tel:+110001111111" class="mobile-tel-link"
+                    >+11 (000) 111-11-11</a
+                  >
+                </li>
+                <li>
+                  <a href="mailto:info@devstudio.com" class="mobile-mail-link"
+                    >info@devstudio.com</a
+                  >
+                </li>
+              </ul>
+            </address>
+
+            <ul class="mobile-social-list">
+              <li class="footer-social-item">
+                <a href="" class="footer-social-link">
+                  <svg width="24" height="24">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-social-item">
+                <a href="" class="footer-social-link">
+                  <svg width="24" height="24">
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-social-item">
+                <a href="" class="footer-social-link">
+                  <svg width="24" height="24">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-social-item">
+                <a href="" class="footer-social-link">
+                  <svg width="24" height="24">
+                    <use href="./images/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
 
     <main>
-      <section class="section hero" id="hero">
+      <section class="section hero hide" id="hero">
         <div class="container">
           <h1 class="hero-title">Effective Solutions for Your Business</h1>
           <button class="btn" type="button">Order Service</button>
@@ -435,7 +511,7 @@
       </section>
     </main>
 
-    <footer class="footer hide">
+    <footer class="footer">
       <div class="container footer-container">
         <div class="footer-info">
           <a href="./index.html" class="logo logo-footer">

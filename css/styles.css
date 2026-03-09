@@ -230,6 +230,7 @@ button {
     margin: 0 auto;
 }
 
+
 @media screen and (min-width: 768px) {
     .container {
         max-width: 768px;
@@ -243,26 +244,30 @@ button {
         padding: 0 15px;
     }
 }
+.section {
+    padding: 120px 0;
 
-.hero {
+}
+
+.section.hero {
    
     background-color: #2E2F42;
     /* color: #FFFFFF; */
     padding: 72px 0;
     margin: 0 auto;
     text-align: center;
-    max-width: 428px;
+    max-width: 100%;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7),
                 rgba(46, 47, 66, 0.7)),
                 url(../images/mob.png);
                 background-repeat: no-repeat;
                 background-position: center;
                 background-size: cover;
-                text-align: center;
+                /* text-align: center; */
 }
 @media screen and (min-width: 768px) {
-    .hero {
-        max-width: 768px;
+    .section.hero {
+        max-width: 100%;
         padding: 112px 0;
         background-image: linear-gradient(rgba(46, 47, 66, 0.7),
                     rgba(46, 47, 66, 0.7)),
@@ -270,7 +275,7 @@ button {
     }
 }
 @media screen and (min-width: 1158px) {
-    .hero {
+    .section.hero {
         max-width: 1440px;
         padding: 188px 0;
         background-image: linear-gradient(rgba(46, 47, 66, 0.7),
@@ -304,10 +309,7 @@ button {
     }
 }
 
-.section {
-   padding: 120px 0;
 
-}
 /* .section.hero {
     max-width: 1440px;
     margin: 0 auto;
@@ -750,49 +752,81 @@ button {
 
 /* #region footer */
 
-.footer > .container {
-    max-width: 1158px;
-    margin: 0 auto;
-    padding: 0 15px;
+.footer {
+    background-color: #2e2f42;
+    padding: 96px 0;
 }
 
-.footer {
-    background-color:  #2e2f42;
-     padding: 100px 0;
+@media screen and (min-width: 1158px) {
+    .footer {
+        padding: 100px 0;
+    }
 }
+
+/* 2. КОНТЕЙНЕР (СЕТКА) */
 .footer-container {
     display: flex;
-    align-items: baseline;
+    flex-direction: column;
+    align-items: center;
+    /* Центр на мобилке */
+    gap: 72px;
 }
 
-.footer-social-container {
-    margin-right: 80px;
+@media screen and (min-width: 768px) {
+    .footer-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: baseline;
+        width: 584px;
+        /* Чтобы форма Subscribe упала на 2-ю строку */
+        gap: 72px 24px;
+        padding-left: 108px;
+        /* Отступ по макету */
+        margin: 0 auto;
+    }
 }
 
+@media screen and (min-width: 1158px) {
+    .footer-container {
+        width: 1158px;
+        flex-wrap: nowrap;
+        gap: 0;
+        padding-left: 15px;
+    }
+}
+
+/* 3. ИНФО БЛОК (ЛОГО И ТЕКСТ) */
 .footer-info {
-    width: 264px;
-    margin-right: 120px;
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+    .footer-info {
+        text-align: left;
+    }
+}
+
+@media screen and (min-width: 1158px) {
+    .footer-info {
+        margin-right: 120px;
+    }
 }
 
 .logo-footer {
-    
     display: inline-block;
     margin-bottom: 16px;
-    color: #f4f4fd;
-    text-decoration: none;
     font-family: "Raleway", sans-serif;
     font-weight: 700;
     font-size: 18px;
     line-height: 1.17;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+    color: #f4f4fd;
 }
 
 .logo-accent {
     color: #4d5ae5;
 }
-
-
 
 .footer-caption {
     width: 264px;
@@ -800,7 +834,53 @@ button {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #f4f4fd;
+    text-align: left;
+    /* Текст внутри блока всегда слева */
+}
+
+/* 4. СОЦСЕТИ */
+.footer-social-container {
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+    .footer-social-container {
+        text-align: left;
+    }
+}
+
+@media screen and (min-width: 1158px) {
+    .footer-social-container {
+        margin-right: 80px;
+    }
+}
+
+.footer-text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+    margin-bottom: 16px;
+}
+
+.footer-social-list {
+    display: flex;
+    gap: 16px;
+    list-style: none;
+    padding: 0;
     margin: 0;
+}
+
+.footer-social-link {
+    width: 40px;
+    height: 40px;
+    background-color: #4d5ae5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-social-link:hover,
@@ -812,37 +892,85 @@ button {
     fill: #f4f4fd;
 }
 
-.footer-text {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: #ffffff;
-    margin-bottom: 16px;
+/* 5. ПОДПИСКА */
+.footer-subscribe-container {
+    width: 100%;
+    text-align: center;
 }
-.footer-social-list {
-    display: flex;
-    gap: 16px;
-    
 
+@media screen and (min-width: 768px) {
+    .footer-subscribe-container {
+        text-align: left;
+        width: auto;
+    }
 }
-.footer-social-link {
+
+.footer-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+@media screen and (min-width: 768px) {
+    .footer-form {
+        flex-direction: row;
+        gap: 24px;
+    }
+}
+
+.footer-form-filed {
+    width: 100%;
+    max-width: 398px;
+    height: 40px;
+    border: 1px solid #ffffff;
+    background-color: transparent;
+    border-radius: 4px;
+    padding-left: 16px;
+    color: #ffffff;
+    font-size: 12px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+}
+
+@media screen and (min-width: 768px) {
+    .footer-form-filed {
+        width: 264px;
+    }
+}
+
+.footer-form-filed::placeholder {
+    color: #ffffff;
+}
+
+.btn-accent-footer {
+    min-width: 165px;
+    height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #ffffff;
     background-color: #4d5ae5;
-     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer-social-bloc {
-   
-    display: flex;
-    align-items: baseline;
-    gap: 80px;
+.btn-accent-footer:hover,
+.btn-accent-footer:focus {
+    background-color: #404bbf;
 }
+
+.footer-form-submir {
+    margin-left: 16px;
+    fill: #ffffff;
+}
+
 /* #endregion */
 
 /* #region footer-form */
@@ -1175,3 +1303,130 @@ button {
     }
 }
 /* #endregion */
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-desktop,
+.socials-desktop {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+
+    .nav-desktop,
+    .socials-desktop {
+        display: flex;
+    }
+
+    .burger-btn {
+        display: none;
+        
+    }
+}
+
+
+.mobile-menu-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 999;
+    padding: 80px 16px 40px 16px;
+    display: flex;
+    flex-direction: column;
+     overflow-y: auto;
+    
+    transform: translateX(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.menu-checkbox:checked~.mobile-menu-wrapper {
+    transform: translateX(0);
+}
+
+
+.menu-close-btn {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+}
+
+
+.mobile-menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-menu-link {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 40px;
+}
+
+.mobile-menu-link.active {
+    color: #404bbf;
+}
+
+
+.mobile-menu-bottom {
+    margin-top: auto;
+}
+
+.mobile-contacts-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 48px;
+}
+
+.mobile-tel-link {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    color: #4d5ae5;
+    line-height: 1.11;
+    text-decoration: none;
+}
+
+.mobile-mail-link {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    color: #434455;
+    text-decoration: none;
+    display: block;
+    margin-top: 40px;
+}
+
+.mobile-social-list {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+@media screen and (max-width: 350px) {
+    .mobile-social-list {
+        gap: 24px;
+    }
+}
