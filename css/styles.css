@@ -166,6 +166,12 @@ button {
     padding: 0 16px;
 }
 
+@media screen and (min-width: 1158px) {
+    .header>.container {
+        
+        padding: 0 15px;
+    }
+}
 .nav-desc {
     display: flex;
     gap: 40px;
@@ -1205,7 +1211,8 @@ button {
    
 }
 .modal-slogan {
-    width: 360px;
+    width: 100%;
+   max-width: 360px;
     margin-bottom: 16px;
     font-weight: 500;
     font-size: 16px;
@@ -1213,6 +1220,8 @@ button {
     letter-spacing: 0.02em;
     text-align: center;
     color: #2e2f42;
+    margin-left: auto;
+    margin-right: auto;
 }
 /* #endregion */
 
