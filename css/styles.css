@@ -286,7 +286,7 @@ button {
 @media screen and (min-width: 768px) {
     .container {
         max-width: 768px;
-        padding: 0 16px;
+    
     }
 }
 
@@ -1116,7 +1116,6 @@ button {
 .socials-desktop .socials-link:hover,
 .socials-desktop .socials-link:focus {
     color: #404bbf;
-/
 }
 
 
@@ -1438,7 +1437,7 @@ button {
 
 
 .container {
-   max-width: 428px;
+   max-width: 320px;
    width: 100%;
    padding: 0 16px;
    margin: 0 auto;
@@ -1574,11 +1573,13 @@ button {
 
 .mobile-tel-link {
     font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
+    font-weight: 600;
+    font-size: 24px;
     color: #4d5ae5;
-    line-height: 1.2;
+    line-height: 1.17;
     text-decoration: none;
+    margin: 0;
+    letter-spacing: 0.02em;
 }
 
 .mobile-mail-link {
