@@ -160,11 +160,10 @@ button {
 
 /* #region header */
 .header > .container {
-    display: flex;
+     display: flex;
     align-items: center;
-    max-width: 1158px; 
-    margin: 0 auto;    
-    padding: 0 15px;
+    justify-content: space-between;
+    padding: 0 16px;
 }
 
 .nav-desc {
@@ -1558,4 +1557,60 @@ button {
     
     margin-bottom: 48px !important;
 }
+.mobile-menu-wrapper.is-open {
+    transform: translateX(0);
+    /* Показываем меню */
+}
+
+/* Для модалки */
+.backdrop.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
 /* #endregion */
+
+.hero {
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+        url(../images/hero-mob.jpg);
+}
+
+
+@media (min-resolution: 192dpi) {
+    .hero {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url(../images/hero-mob@2x.jpg);
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    .hero {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url(../images/hero-tab.jpg);
+    }
+
+    
+    @media (min-resolution: 192dpi) {
+        .hero {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+                url(../images/hero-tab@2x.jpg);
+        }
+    }
+}
+
+
+@media screen and (min-width: 1158px) {
+    .hero {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url(../images/hero-desk.jpg);
+    }
+
+    
+    @media (min-resolution: 192dpi) {
+        .hero {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+                url(../images/hero-desk@2x.jpg);
+        }
+    }
+}
