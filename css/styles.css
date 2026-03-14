@@ -1,8 +1,5 @@
 /* #region class1 */
-.hide {
-    display: none;
 
-}
 /* #endregion */
 
 /* #region base styles */
@@ -915,7 +912,7 @@ button {
     fill: #f4f4fd;
 }
 
-/* 5. ПОДПИСКА */
+
 .footer-subscribe-container {
     width: 100%;
     text-align: center;
@@ -1308,6 +1305,65 @@ button {
 /* #endregion */
 
 /* #region mobile */
+
+.mobile-menu-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffffff;
+    z-index: 999;
+
+    
+    transform: translateX(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    display: flex;
+    flex-direction: column;
+    padding: 72px 16px 40px 16px;
+}
+
+
+#menu-toggle:checked+.burger-btn+.mobile-menu-wrapper {
+    transform: translateX(0);
+}
+
+
+@media screen and (max-width: 767px) {
+
+    .nav-desktop,
+    .socials-desktop {
+        display: none;
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+
+    .burger-btn,
+    .mobile-menu-wrapper {
+        display: none;
+    }
+}
+
+
+.menu-close-btn {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e7e9fc;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+
 .container {
    max-width: 320px; 
    padding: 0 16px;
@@ -1392,9 +1448,16 @@ button {
 
 
 .mobile-menu-list {
-    list-style: none;
+    .mobile-menu-list {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            margin-bottom: auto;
+           
+        }
+    /* list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 0; */
 }
 
 .mobile-menu-link {
@@ -1418,9 +1481,15 @@ button {
 }
 
 .mobile-contacts-list {
-    list-style: none;
+    .mobile-contacts-list {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        margin-bottom: 48px;
+        }
+    /* list-style: none;
     padding: 0;
-    margin-bottom: 48px;
+    margin-bottom: 48px; */
 }
 
 .mobile-tel-link {
@@ -1475,5 +1544,18 @@ button {
     
     background-color: #4d5ae5;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mobile-tel-link {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    color: #4d5ae5;
+}
+.mobile-contacts {
+    display: block;
+    font-style: normal;
+    
+    margin-bottom: 48px !important;
 }
 /* #endregion */
