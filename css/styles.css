@@ -306,14 +306,14 @@ button {
     background-size: cover;
     /* Оставляем ОДИН набор путей (выбери те, что реально есть в папке) */
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-        url(../images/hero-mob.jpg);
+        url(../images/mob.png);
 }
 
 /* Retina для мобилки */
 @media (min-resolution: 192dpi) {
     .hero {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-            url(../images/hero-mob@2x.jpg);
+            url(../images/mob@2x.png);
     }
 }
 
@@ -322,14 +322,14 @@ button {
     .hero {
         padding: 112px 0;
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-            url(../images/hero-tab.jpg);
+            url(../images/laptop.png);
     }
 
     /* Retina для планшета */
     @media (min-resolution: 192dpi) {
         .hero {
             background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-                url(../images/hero-tab@2x.jpg);
+                url(../images/tab@2x.png);
         }
     }
 }
@@ -339,14 +339,14 @@ button {
     .hero {
         padding: 188px 0;
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-            url(../images/hero-desk.jpg);
+            url(../images/people-office.png);
     }
 
     /* Retina для десктопа */
     @media (min-resolution: 192dpi) {
         .hero {
             background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-                url(../images/hero-desk@2x.jpg);
+                url(../images/desk@2x.png);
         }
     }
 }
@@ -1143,10 +1143,10 @@ button {
 
     border-radius: 4px;
     background: #fcfcfc;
-    width: calc(100% - 36px);
-   max-width: 408px;
+    width: calc(100% - 32px);
+   
     min-height: 584px;
-    padding: 48px 24px 24px;
+    padding: 48px 16px 24px 16px;
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
             opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 
@@ -1157,7 +1157,7 @@ button {
 @media screen and (min-width: 768px) {
     .modal {
         width: 408px;
-        padding: 72px 24px 24px;
+        padding: 72px 24px 24px 24px;
     }
 }
 
@@ -1516,7 +1516,7 @@ button {
     color: #2e2f42;
     text-decoration: none;
     display: block;
-    margin-bottom: 40px;
+    
 }
 
 .mobile-menu-link.active {
