@@ -295,38 +295,59 @@ button {
 
 }
 
-.section.hero {
-   
-    background-color: #2E2F42;
-    /* color: #FFFFFF; */
-    padding: 72px 0;
+.hero {
+    max-width: 1440px;
     margin: 0 auto;
+    padding: 72px 0;
     text-align: center;
-    max-width: 100%;
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7),
-                rgba(46, 47, 66, 0.7)),
-                url(../images/mob.png);
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: cover;
-                
+    background-color: #2e2f42;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* Оставляем ОДИН набор путей (выбери те, что реально есть в папке) */
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+        url(../images/hero-mob.jpg);
 }
-@media screen and (min-width: 768px) {
-    .section.hero {
-        max-width: 100%;
-        padding: 112px 0;
-        background-image: linear-gradient(rgba(46, 47, 66, 0.7),
-                    rgba(46, 47, 66, 0.7)),
-                    url(../images/laptop.png);
+
+/* Retina для мобилки */
+@media (min-resolution: 192dpi) {
+    .hero {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url(../images/hero-mob@2x.jpg);
     }
 }
+
+/* 2. ПЛАНШЕТ (768px+) */
+@media screen and (min-width: 768px) {
+    .hero {
+        padding: 112px 0;
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url(../images/hero-tab.jpg);
+    }
+
+    /* Retina для планшета */
+    @media (min-resolution: 192dpi) {
+        .hero {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+                url(../images/hero-tab@2x.jpg);
+        }
+    }
+}
+
+/* 3. ДЕСКТОП (1158px+) */
 @media screen and (min-width: 1158px) {
-    .section.hero {
-        max-width: 1440px;
+    .hero {
         padding: 188px 0;
-        background-image: linear-gradient(rgba(46, 47, 66, 0.7),
-                    rgba(46, 47, 66, 0.7)),
-                    url(../images/people-office.png);
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url(../images/hero-desk.jpg);
+    }
+
+    /* Retina для десктопа */
+    @media (min-resolution: 192dpi) {
+        .hero {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+                url(../images/hero-desk@2x.jpg);
+        }
     }
 }
 .hero-title {
