@@ -1008,12 +1008,12 @@ button {
 /* #endregion */
 
 /* #region footer-form */
-.footer-form {
+/* .footer-form {
     display: flex;
     gap: 24px;
     
 
-}
+} */
 
 .footer-form-filed:focus {
     border-color: #31d0aa;
