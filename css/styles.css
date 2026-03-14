@@ -844,10 +844,10 @@ button {
         flex-direction: row;
         flex-wrap: wrap;
         align-items: baseline;
-        width: 584px;
+        
         
         gap: 72px 24px;
-        padding-left: 108px;
+       
         
         margin: 0 auto;
     }
@@ -855,10 +855,10 @@ button {
 
 @media screen and (min-width: 1158px) {
     .footer-container {
-        width: 1158px;
+        
         flex-wrap: nowrap;
         gap: 0;
-        padding-left: 15px;
+       
         justify-content:space-between;
     }
 }
@@ -1381,17 +1381,21 @@ button {
     width: 100%;
     height: 100%;
     background-color: #ffffff;
-    /* z-index: 999; */
+    z-index: 999;
+
+   
+    padding: 80px 35px 40px 40px;
+    display: flex;
+    flex-direction: column;
+
+   
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    transform: translateX(100%);
+
+   
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
         visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-    display: flex;
-    flex-direction: column;
-    padding: 72px 16px 40px 16px;
 }
 
 
@@ -1573,8 +1577,8 @@ button {
 
 .mobile-tel-link {
     font-style: normal;
-    font-weight: 600;
-    font-size: 24px;
+    font-weight: 500;
+    font-size: 20px;
     color: #4d5ae5;
     line-height: 1.17;
     text-decoration: none;
